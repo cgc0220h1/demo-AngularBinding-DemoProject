@@ -15,11 +15,11 @@ export class MyPetComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateName(name): void {
+  updateName(name: string): void {
     this.petName = name;
   }
 
-  updateImage(image): void {
+  updateImage(image: string): void {
     this.petImageLink = image;
   }
 }
