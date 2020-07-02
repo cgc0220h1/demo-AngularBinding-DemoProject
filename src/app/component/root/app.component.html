@@ -1,0 +1,9 @@
+<h2>Demo Apps</h2>
+<button (click)="showFontSizeApp()">Font size</button>
+<button (click)="showMyPetApp()">Vet</button>
+<button (click)="showCalculatorApp()">Calculator</button>
+<button (click)="showColorPickerApp()">Color Picker</button>
+<app-font-size *ngIf="isFontSizeOn"></app-font-size>
+<app-my-pet *ngIf="isMyPetOn"></app-my-pet>
+<app-calculator *ngIf="isCalculatorOn"></app-calculator>
+<app-color-picker *ngIf="isColorPickerOn"></app-color-picker>

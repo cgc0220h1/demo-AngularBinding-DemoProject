@@ -1,0 +1,11 @@
+<h2>Color Picker</h2>
+<div>
+  <label for="color-selector">Chọn màu:</label>
+  <input id="color-selector" [(ngModel)]="background" type="color">
+  <p>{{background}}</p>
+</div>
+
+<p>Output:</p>
+<div>
+  <p [style.background-color]="background"></p>
+</div>
