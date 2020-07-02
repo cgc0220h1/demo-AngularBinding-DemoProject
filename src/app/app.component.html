@@ -6,6 +6,10 @@
   <li>
     <button (click)="showMyPetApp()">Vet</button>
   </li>
+  <li>
+    <button (click)="showCalculatorApp()">Calculator</button>
+  </li>
 </ul>
 <app-font-size *ngIf="isFontSizeOn"></app-font-size>
 <app-my-pet *ngIf="isMyPetOn"></app-my-pet>
+<app-calculator *ngIf="isCalculatorOn"></app-calculator>
