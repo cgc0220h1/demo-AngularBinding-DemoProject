@@ -1,1 +1,10 @@
-<p>my-pet works!</p>
+<h2>Pet Profile</h2>
+<p>Please insert Pet name and Pet Image Link below </p>
+<label for="pet-name">Pet Name</label>
+<input type="text" id="pet-name" #name (change)="updateName(name.value)">
+<br>
+<label for="pet-image">Pet Image</label>
+<input type="text" id="pet-image" #imageLink (change)="updateImage(imageLink.value)">
+<br>
+<h3>Pet Name: {{petName}}</h3>
+<img [src]="petImageLink" alt="Pet Image" style="max-width: 100%">

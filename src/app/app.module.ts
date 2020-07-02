@@ -1,10 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { FontSizeComponent } from './component/font-size/font-size.component';
-import { MyPetComponent } from './component/my-pet/my-pet.component';
-import {FormsModule} from "@angular/forms";
+import {AppComponent} from './app.component';
+import {FontSizeComponent} from './component/font-size/font-size.component';
+import {MyPetComponent} from './component/my-pet/my-pet.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,4 +19,5 @@ import {FormsModule} from "@angular/forms";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
