@@ -9,24 +9,12 @@ export class CalculatorComponent implements OnInit {
   output: number;
   first: number;
   second: number;
-  operator = '+';
+  operator: string;
 
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  onFirstChange(value): void {
-    this.first = Number(value);
-  }
-
-  onSecondChange(value): void {
-    this.second = Number(value);
-  }
-
-  onSelectChange(value): void {
-    this.operator = value;
   }
 
   calculate(): void {
