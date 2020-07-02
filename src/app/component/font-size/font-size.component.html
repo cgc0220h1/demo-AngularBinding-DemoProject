@@ -1,0 +1,13 @@
+<h2>Font Size App</h2>
+<div>
+  <label for="input">Input Text</label>
+  <input type="text" id="input" [(ngModel)]="content">
+</div>
+<div>
+  <label for="slider">Slide to Increase Font</label>
+  <input type="range" id="slider" max="72" min="9" value="10" [(ngModel)]="fontSize">
+</div>
+
+<div class="terminal">
+  <pre [style.fontSize.px]="fontSize">{{content}}</pre>
+</div>
