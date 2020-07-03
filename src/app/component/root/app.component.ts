@@ -11,6 +11,7 @@ export class AppComponent {
   isMyPetOn = false;
   isCalculatorOn = false;
   isColorPickerOn: any;
+  isGitHubOn: any;
 
   showFontSizeApp(): void {
     if (this.isFontSizeOn !== true) {
@@ -53,6 +54,18 @@ export class AppComponent {
       this.isCalculatorOn = false;
     } else {
       this.isColorPickerOn = false;
+    }
+  }
+
+  showGithubSearchApp(): void {
+    if (this.isGitHubOn !== true) {
+      this.isGitHubOn = true;
+      this.isFontSizeOn = false;
+      this.isMyPetOn = false;
+      this.isCalculatorOn = false;
+      this.isColorPickerOn = false;
+    } else {
+      this.isGitHubOn = false;
     }
   }
 }
