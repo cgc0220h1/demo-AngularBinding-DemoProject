@@ -16,12 +16,12 @@ export class GithubService {
   }
 
   findByKeyword(keyword: string): Observable<IRepos> {
-    const params = new HttpParams({fromString: 'q=keyword'});
-    return this.httpClient.get<IRepos>(this.url, {responseType: 'json', params})
-      .pipe(map((response: IRepos) => {
-        return {
-          items: response.items,
-        };
-      }));
+    // const params = new HttpParams({fromString: 'q=keyword'});
+    return this.httpClient.get<IRepos>(this.url + '?q=' + keyword);
+    // .pipe(map((response: IRepos) => {
+    //   return {
+    //     items: response.items,
+    //   };
+    // }));
   }
 }

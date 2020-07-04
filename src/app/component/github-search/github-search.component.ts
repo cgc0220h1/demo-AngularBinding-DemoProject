@@ -18,11 +18,7 @@ export class GithubSearchComponent implements OnInit {
 
   searchGithub(keyword: string): void {
     this.githubService.findByKeyword(keyword).subscribe(next => {
-      this.result = next.items.map((item: ISingleRepo) => {
-        return {
-          name: item.name,
-        } as ISingleRepo;
-      });
+      this.result = next.items;
     });
   }
 }
