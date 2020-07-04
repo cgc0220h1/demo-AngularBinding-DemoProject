@@ -1,6 +1,7 @@
-interface ISingleRepo {
+export interface ISingleRepo {
   name: string;
 }
-interface IRepos {
+
+export interface IRepos {
   items: Array<ISingleRepo>;
 }

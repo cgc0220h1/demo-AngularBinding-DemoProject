@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GithubService} from '../../service/github.service';
+import {ISingleRepo} from '../../model/github';
 
 @Component({
   selector: 'app-github-search',
@@ -7,7 +8,7 @@ import {GithubService} from '../../service/github.service';
   styleUrls: ['./github-search.component.css']
 })
 export class GithubSearchComponent implements OnInit {
-  result: IRepos;
+  result: Array<ISingleRepo>;
 
   constructor(private githubService: GithubService) {
   }
@@ -15,11 +16,13 @@ export class GithubSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   searchGithub(keyword: string): void {
     this.githubService.findByKeyword(keyword).subscribe(next => {
-      this.result = next;
-      console.log(this.result);
+      this.result = next.items.map((item: ISingleRepo) => {
+        return {
+          name: item.name,
+        } as ISingleRepo;
+      });
     });
   }
 }
