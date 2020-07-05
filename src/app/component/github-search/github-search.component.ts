@@ -9,6 +9,7 @@ import {ISingleRepo} from '../../model/github';
 })
 export class GithubSearchComponent implements OnInit {
   result: Array<ISingleRepo>;
+  count: number;
 
   constructor(private githubService: GithubService) {
   }
@@ -18,6 +19,7 @@ export class GithubSearchComponent implements OnInit {
 
   searchGithub(keyword: string): void {
     this.githubService.findByKeyword(keyword).subscribe(next => {
+      this.count = next.total_count;
       this.result = next.items;
     });
   }

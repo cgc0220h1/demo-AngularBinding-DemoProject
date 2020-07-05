@@ -4,4 +4,5 @@ export interface ISingleRepo {
 
 export interface IRepos {
   items: Array<ISingleRepo>;
+  total_count: number;
 }
