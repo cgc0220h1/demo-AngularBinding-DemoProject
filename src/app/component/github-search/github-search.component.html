@@ -6,7 +6,7 @@
            #keyword>
     <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchGithub(keyword.value)">Search</button>
   </div>
-  <div class="card">
-
-  </div>
 </nav>
+<div class="card">
+  <app-github-result [repository]="result"></app-github-result>
+</div>

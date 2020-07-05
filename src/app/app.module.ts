@@ -9,6 +9,7 @@ import { CalculatorComponent } from './component/calculator/calculator.component
 import { ColorPickerComponent } from './component/color-picker/color-picker.component';
 import { GithubSearchComponent } from './component/github-search/github-search.component';
 import {HttpClientModule} from '@angular/common/http';
+import { GithubResultComponent } from './component/github-result/github-result.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
     CalculatorComponent,
     ColorPickerComponent,
     GithubSearchComponent,
+    GithubResultComponent,
   ],
   imports: [
     BrowserModule,
